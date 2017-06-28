@@ -13,3 +13,7 @@ Scala encryption using AES/CBC/PKCS5PADDING
 # package
 
  sbt package
+
+# package with dependecies
+
+ sbt clean assembly
