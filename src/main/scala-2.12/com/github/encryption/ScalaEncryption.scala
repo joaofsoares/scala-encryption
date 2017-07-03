@@ -7,7 +7,7 @@ import org.apache.commons.codec.binary.Base64
 
 /**
   * Secret word to generate encryption
-  * Example: "abc12345abc67890" or "abcdefghijlmnop1"
+  * Example: "abc12345abc67890" or "abcdefghijlmnop1" or any word with 16 bits.
   *
   * @param secretWord
   */
