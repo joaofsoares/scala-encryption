@@ -11,7 +11,7 @@ import org.apache.commons.codec.binary.Base64
   *
   * @param secretWord
   */
-class ScalaEncryption(secretWord: String) {
+class ScalaEncryption private(secretWord: String) {
 
   private final val keySpec = new SecretKeySpec(secretWord.getBytes("UTF-8"), "AES")
   private final val iv = new IvParameterSpec(secretWord.getBytes("UTF-8"))
@@ -32,5 +32,11 @@ class ScalaEncryption(secretWord: String) {
     new String(cipher.doFinal(Base64.decodeBase64(value)))
 
   }
+
+}
+
+object ScalaEncryption {
+
+  def apply(secretWord: String) = new ScalaEncryption(secretWord)
 
 }

@@ -7,7 +7,7 @@ class ScalaEncryptionTest {
   @Test
   def testEncryption: Unit = {
 
-    val scalaEncryption = new ScalaEncryption("abc12345abc67890")
+    val scalaEncryption = ScalaEncryption("abc12345abc67890")
 
     val number = "123456"
 
